@@ -1,0 +1,41 @@
+﻿@model MealListViewModel
+
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row jumbotron">
+        @foreach (var item in Model.GetFoods)
+        {
+            <div class="col-md-3 m-4 ">
+                <div class="card bg-warning" style="width: 202px; height:400px;">
+                    <img src="~/img/yiyecek/@item.foodİmageUrl" class="card-img-top" style="width:200px; height:200px;">
+                    <div class="card-body">
+                        <h5 class="card-title offset-3">@item.foodName</h5>
+                        <p class="card-text offset-3">@item.desription</p>
+                        <h2 class="card-text offset-3">@item.foodprice TL</h2>
+                        <a asp-controller="Home" asp-action="FoodDetail" asp-route-id="@item.foodId" class=" btn btn-primary offset-3">İncele</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row jumbotron">
+        @foreach (var item in Model.GetBeverages)
+        {
+            <div class="col-md-3  m-4 ">
+                <div class="card bg-warning" style="width: 202px; height:400px;">
+                    <img src="~/img/İçecek/@item.beverageİmageUrl" class="card-img-top" style="width:200px; height:200px; ">
+                    <div class="card-body">
+                        <h5 class="card-title offset-3">@item.beverageName</h5>
+                        <p class="card-text offset-3">@item.description</p>
+                        <h2 class="card-text offset-3">@item.beverageprice TL</h2>
+                        <a asp-controller="Home" asp-action="BeverageDetail" asp-route-id="@item.beverageId" class="btn btn-primary offset-3">İncele</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

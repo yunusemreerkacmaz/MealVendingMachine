@@ -1,0 +1,23 @@
+﻿@model DetailViewModel
+@{
+    ViewData["Title"] = "Detay";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h1>Detay</h1>
+<div class="row jumbotron">
+    <div class="col-md-3 m-4 ">
+        <center>
+            <div class="card offset-6" style="width: 500px; height:500px;">
+                <img src="~/img/yiyecek/@Model.GetFoods.foodİmageUrl" class="card-img-top" style="width:500px; height:700px;">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.GetFoods.foodName</h5>
+                    <p class="card-text">@Model.GetFoods.desription</p>
+                    <h5 class="card-footer">@Model.GetFoods.foodprice TL</h5>
+                    <a href="#" class="btn btn-primary">Ekle</a>
+                </div>
+            </div>
+        </center>
+    </div>
+</div>
+

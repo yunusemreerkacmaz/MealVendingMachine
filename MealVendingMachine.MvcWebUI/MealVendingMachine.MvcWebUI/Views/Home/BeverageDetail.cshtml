@@ -1,0 +1,23 @@
+﻿@model DetailViewModel
+@{
+    ViewData["Title"] = "BeverageDetail";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h1>BeverageDetail</h1>
+
+<div class="row jumbotron">
+    <div class="col-md-3 m-4 ">
+        <center>
+            <div class="card offset-6" style="width: 500px; height:500px;">
+                <img src="~/img/İçecek/@Model.GetBeverages.beverageİmageUrl" class="card-img-top" style="width:500px; height:500px;">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.GetBeverages.beverageName</h5>
+                    <p class="card-text">@Model.GetBeverages.description</p>
+                    <h5 class="card-footer">@Model.GetBeverages.beverageprice TL</h5>
+                    <a href="/Home/AddFood/@Model.GetBeverages.beverageId" class="btn btn-primary">Ekle</a>
+                </div>
+            </div>
+        </center>
+    </div>
+</div>

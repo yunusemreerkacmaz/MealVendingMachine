@@ -1,0 +1,11 @@
+﻿.img {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #CCCCCC;
+    background-color: #FFFFFF;
+    padding: 1px;
+}
+
+.div {
+    border-radius: 5px
+}

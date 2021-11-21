@@ -1,0 +1,24 @@
+﻿@model MachineNumbersViewModel
+
+
+@if (ViewBag.control == "true")
+{
+    <h1>Yiyecek Numaraları</h1>
+
+    @foreach (var item in Model.GetFoods)
+    {
+        <a class="btn btn-light mt-2 mb-2" href="/Home/Index/1">@item.foodId</a>
+    }
+}
+@if (ViewBag.control == "false")
+{
+    <h1>İçecek Numaraları</h1>
+
+    @foreach (var item in Model.GetBeverages)
+    {
+        <a class="btn btn-light mt-2 mb-2" href="/Home/Index/2">@item.beverageId</a>
+    }
+
+}
+
+<br>
